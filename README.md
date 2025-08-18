@@ -1,4 +1,4 @@
-# OSINT Toolkit
+# OSINT toolkit
 
 Set of basic OSINT scripts designed for junior cyber intelligence analysts. Includes examples and sample outputs so you can learn step by step. Your essential toolkit to collect, explore, and analyze public information efficiently.
 
