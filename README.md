@@ -24,8 +24,8 @@ Set of basic OSINT scripts designed for junior cyber intelligence analysts. Incl
 ---
 
 ## Quick Start
+## Setup Environment
 
-### Setup Environment
 ```bash
 # Create virtual environment
 python -m venv .venv
@@ -38,11 +38,11 @@ source .venv/bin/activate
 
 # Install dependencies
 pip install -r requirements.txt
-
 ```
 
-# Example Usage
+## Example Usage
 
+```bash
 # Email Checker
 export HIBP_API_KEY="YOUR_API_KEY"   # On Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
@@ -58,13 +58,12 @@ python scripts/social_media_scraper.py username
 
 # IP Information (optional)
 python scripts/ip_info.py 8.8.8.8
-
 ```
 
 ## Project Structure
 
-###OSINT-Toolkit/
-
+```bash
+OSINT-Toolkit/
 ├── scripts/
 │   ├── email_checker.py
 │   ├── image_metadata.py
@@ -78,33 +77,29 @@ python scripts/ip_info.py 8.8.8.8
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-
----
+```
 
 ## Requirements
 
-- Python 3.10+
+```bash
+# Python version
+Python 3.10+
 
-- Dependencies in requirements.txt:
-
+# Dependencies
 requests
 python-whois
 pillow
 beautifulsoup4
-
----
+```
 
 ## Author
 
-- [Your Name] – Threat Intelligence Analyst & Cybersecurity Specialist
+```bash
+[Your Name] – Threat Intelligence Analyst & Cybersecurity Specialist
+Cybersecurity Awareness & Automation Expert
+Power BI dashboards & automation for cybersecurity metrics
+Phishing simulations, threat intelligence, and resilience training
 
-- Cybersecurity Awareness & Automation Expert
-
-- Power BI dashboards & automation for cybersecurity metrics
-
-- Phishing simulations, threat intelligence, and resilience training
-
-### Connect with me:
-
+# Connect with me
 LinkedIn
-
+```
