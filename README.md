@@ -1,48 +1,85 @@
 <img width="933" height="382" alt="OSINT TOOLKIT CRISCTI" src="https://github.com/user-attachments/assets/706e5beb-62e8-4f37-a212-d7d549f290ee" />
 
-# OSINT toolkit
+[![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/TU_USUARIO/OSINT-Toolkit-for-Beginners?style=social)](https://github.com/TU_USUARIO/OSINT-Toolkit-for-Beginners/stargazers)
+
+# OSINT Toolkit
 
 Set of basic OSINT scripts designed for junior cyber intelligence analysts. Includes examples and sample outputs so you can learn step by step. Your essential toolkit to collect, explore, and analyze public information efficiently.
 
 ## Included scripts
-- **email_checker.py** → Checks if an email appears in data breaches (requires a HaveIBeenPwned API key).
-- **image_metadata.py** → Extracts EXIF metadata from images (camera, date, GPS if available). 
-- **whois_lookup.py** → Retrieves public information about domains and basic IP resolution.
+
+| Script | Description |
+|--------|-------------|
+| `email_checker.py` | Checks if an email appears in data breaches (requires [HaveIBeenPwned API](https://haveibeenpwned.com/API/v3)). |
+| `image_metadata.py` | Extracts EXIF metadata from images (camera, date, GPS if available). |
+| `whois_lookup.py` | Retrieves public information about domains and basic IP resolution. |
+| `social_media_scraper.py` *(optional)* | Searches for public information on social media profiles. |
+| `ip_info.py` *(optional)* | Collects IP geolocation and ASN information. |
+
+---
 
 ## Quick start
+### 1️⃣ Setup environment
 ```bash
-# Create environment and install dependencies
-python -m venv .venv && source .venv/bin/activate  # on Windows: .venv\Scripts\activate
+python -m venv .venv
+source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-# 1) Email checker (requires HIBP API KEY)
-export HIBP_API_KEY="YOUR_API_KEY"   # on Windows: set HIBP_API_KEY=YOUR_API_KEY
+## 2️⃣ Example usage
+
+- Email Checker
+export HIBP_API_KEY="YOUR_API_KEY"   # Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
 
-# 2) EXIF metadata
+- EXIF Metadata
 python scripts/image_metadata.py examples/sample_image.jpg
 
-# 3) Basic WHOIS / DNS
-python scripts/whois_lookup.py example.com
-```
+- Basic WHOIS / DNS
+python scripts/social_media_scraper.py username
 
-## Requirements
-- Python 3.10+
-- Dependencies listed in `requirements.txt`
+- Social Media Scraper
+python scripts/social_media_scraper.py username
 
-## Structure
-```
+- IP Information
+python scripts/ip_info.py 8.8.8.8
+
+## Project Structure
 OSINT-Toolkit/
 ├── scripts/
 │   ├── email_checker.py
 │   ├── image_metadata.py
-│   └── whois_lookup.py
+│   ├── whois_lookup.py
+│   ├── social_media_scraper.py  # optional
+│   └── ip_info.py               # optional
 ├── examples/
 │   ├── sample_email_output.txt
-│   └── sample_image.jpg (add it yourself)
+│   ├── sample_domain_output.txt
+│   └── sample_image.jpg
 ├── requirements.txt
 ├── LICENSE
 └── README.md
-```
 
-This is an educational project. Please DO NOT use these scripts in ways that violate terms of service or applicable laws.
+## Requirements
+- Python 3.10+
+- Dependencies listed in requirements.txt:
+requests
+python-whois
+pillow
+beautifulsoup4
+
+## Author
+Cris-CTI – Threat Intelligence Analyst & Cybersecurity Specialist
+
+- Cybersecurity Awareness & Automation Expert
+
+- Power BI dashboards & automation for cybersecurity metrics
+
+- Phishing simulations, Threat Intelligence, and resilience training
+
+## Connect with me:
+
+LinkedIn: https://www.linkedin.com/in/cristina-martinez-campos/
+
+```
