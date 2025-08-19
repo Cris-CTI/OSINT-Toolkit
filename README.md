@@ -1,3 +1,5 @@
+<img width="1920" height="1080" alt="Black Blue Modern Gradient Cybersecurity Presentation" src="https://github.com/user-attachments/assets/21fe0193-57e7-4b5e-b254-6e3ae7c42d16" />
+
 # OSINT toolkit
 
 Set of basic OSINT scripts designed for junior cyber intelligence analysts. Includes examples and sample outputs so you can learn step by step. Your essential toolkit to collect, explore, and analyze public information efficiently.
