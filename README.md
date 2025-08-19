@@ -1,4 +1,4 @@
-<img width="1920" height="1080" alt="Black Blue Modern Gradient Cybersecurity Presentation" src="https://github.com/user-attachments/assets/21fe0193-57e7-4b5e-b254-6e3ae7c42d16" />
+<img width="933" height="382" alt="OSINT TOOLKIT CRISCTI" src="https://github.com/user-attachments/assets/706e5beb-62e8-4f37-a212-d7d549f290ee" />
 
 # OSINT toolkit
 
