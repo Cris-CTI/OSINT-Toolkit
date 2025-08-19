@@ -1,8 +1,10 @@
 <img width="933" height="382" alt="OSINT TOOLKIT CRISCTI" src="https://github.com/user-attachments/assets/706e5beb-62e8-4f37-a212-d7d549f290ee" />
 
-[![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/TU_USUARIO/OSINT-Toolkit-for-Beginners?style=social)](https://github.com/TU_USUARIO/OSINT-Toolkit-for-Beginners/stargazers)
+
+[Python 3.10+](https://www.python.org/) | [MIT License](LICENSE)
+
+---
+
 
 # OSINT Toolkit
 
@@ -15,37 +17,47 @@ Set of basic OSINT scripts designed for junior cyber intelligence analysts. Incl
 | `email_checker.py` | Checks if an email appears in data breaches (requires [HaveIBeenPwned API](https://haveibeenpwned.com/API/v3)). |
 | `image_metadata.py` | Extracts EXIF metadata from images (camera, date, GPS if available). |
 | `whois_lookup.py` | Retrieves public information about domains and basic IP resolution. |
-| `social_media_scraper.py` *(optional)* | Searches for public information on social media profiles. |
-| `ip_info.py` *(optional)* | Collects IP geolocation and ASN information. |
+| `social_media_scraper.py` | Searches for public information on social media profiles. |
+| `ip_info.py`  | Collects IP geolocation and ASN information. |
 
 ---
 
-## Quick start
-### 1️⃣ Setup environment
+## Quick Start
+
+### Setup Environment
 ```bash
 python -m venv .venv
 source .venv/bin/activate   # On Windows: .venv\Scripts\activate
 pip install -r requirements.txt
 
-## 2️⃣ Example usage
+Example Usage
 
-- Email Checker
+Email Checker
+
 export HIBP_API_KEY="YOUR_API_KEY"   # Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
 
-- EXIF Metadata
+
+EXIF Metadata
+
 python scripts/image_metadata.py examples/sample_image.jpg
 
-- Basic WHOIS / DNS
+
+Basic WHOIS / DNS
+
+python scripts/whois_lookup.py example.com
+
+
+Social Media Scraper
+
 python scripts/social_media_scraper.py username
 
-- Social Media Scraper
-python scripts/social_media_scraper.py username
 
-- IP Information
+IP Information
+
 python scripts/ip_info.py 8.8.8.8
 
-## Project Structure
+Project Structure
 OSINT-Toolkit/
 ├── scripts/
 │   ├── email_checker.py
@@ -61,25 +73,28 @@ OSINT-Toolkit/
 ├── LICENSE
 └── README.md
 
-## Requirements
-- Python 3.10+
-- Dependencies listed in requirements.txt:
+Requirements
+
+Python 3.10+
+
+Dependencies in requirements.txt:
+
 requests
 python-whois
 pillow
 beautifulsoup4
 
-## Author
-Cris-CTI – Threat Intelligence Analyst & Cybersecurity Specialist
+Author
 
-- Cybersecurity Awareness & Automation Expert
+[Your Name] – Threat Intelligence Analyst & Cybersecurity Specialist
 
-- Power BI dashboards & automation for cybersecurity metrics
+Cybersecurity Awareness & Automation Expert
 
-- Phishing simulations, Threat Intelligence, and resilience training
+Power BI dashboards & automation for cybersecurity metrics
 
-## Connect with me:
+Phishing simulations, threat intelligence, and resilience training
 
-LinkedIn: https://www.linkedin.com/in/cristina-martinez-campos/
+Connect with me:
 
-```
+LinkedIn
+
