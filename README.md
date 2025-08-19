@@ -2,7 +2,6 @@
 
 [![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![GitHub stars](https://img.shields.io/github/stars/TU_USUARIO/OSINT-Toolkit-for-Beginners?style=social)](https://github.com/TU_USUARIO/OSINT-Toolkit-for-Beginners/stargazers)
 
 ---
 
@@ -48,15 +47,15 @@ export HIBP_API_KEY="YOUR_API_KEY"   # On Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
 
 # EXIF Metadata
-python scripts/image_metadata.py examples/sample_image.jpg
+python scripts/image_metadata.py 
 
 # Basic WHOIS / DNS
 python scripts/whois_lookup.py example.com
 
-# Social Media Scraper (optional)
+# Social Media Scraper 
 python scripts/social_media_scraper.py username
 
-# IP Information (optional)
+# IP Information 
 python scripts/ip_info.py 8.8.8.8
 ```
 
@@ -70,10 +69,6 @@ OSINT-Toolkit/
 │   ├── whois_lookup.py
 │   ├── social_media_scraper.py 
 │   └── ip_info.py             
-├── examples/
-│   ├── sample_email_output.txt
-│   ├── sample_domain_output.txt
-│   └── sample_image.jpg
 ├── requirements.txt
 ├── LICENSE
 └── README.md
