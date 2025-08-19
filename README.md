@@ -27,38 +27,50 @@ Set of basic OSINT scripts designed for junior cyber intelligence analysts. Incl
 ### Setup Environment
 ```bash
 python -m venv .venv
-source .venv/bin/activate   # On Windows: .venv\Scripts\activate
+```bash
+# On Windows
+.venv\Scripts\activate
+```bash
+# On Linux / Mac
+source .venv/bin/activate
+```bash
 pip install -r requirements.txt
 
-Example Usage
+---
 
-Email Checker
+## Example Usage
+
+### Email Checker
 
 export HIBP_API_KEY="YOUR_API_KEY"   # Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
 
 
-EXIF Metadata
+### EXIF Metadata
 
 python scripts/image_metadata.py examples/sample_image.jpg
 
 
-Basic WHOIS / DNS
+### Basic WHOIS / DNS
 
 python scripts/whois_lookup.py example.com
 
 
-Social Media Scraper
+### Social Media Scraper
 
 python scripts/social_media_scraper.py username
 
 
-IP Information
+### IP Information
 
 python scripts/ip_info.py 8.8.8.8
 
-Project Structure
-OSINT-Toolkit/
+---
+
+## Project Structure
+
+###OSINT-Toolkit/
+
 ├── scripts/
 │   ├── email_checker.py
 │   ├── image_metadata.py
@@ -73,28 +85,32 @@ OSINT-Toolkit/
 ├── LICENSE
 └── README.md
 
-Requirements
+---
 
-Python 3.10+
+## Requirements
 
-Dependencies in requirements.txt:
+- Python 3.10+
+
+- Dependencies in requirements.txt:
 
 requests
 python-whois
 pillow
 beautifulsoup4
 
-Author
+---
 
-[Your Name] – Threat Intelligence Analyst & Cybersecurity Specialist
+## Author
 
-Cybersecurity Awareness & Automation Expert
+- [Your Name] – Threat Intelligence Analyst & Cybersecurity Specialist
 
-Power BI dashboards & automation for cybersecurity metrics
+- Cybersecurity Awareness & Automation Expert
 
-Phishing simulations, threat intelligence, and resilience training
+- Power BI dashboards & automation for cybersecurity metrics
 
-Connect with me:
+- Phishing simulations, threat intelligence, and resilience training
+
+### Connect with me:
 
 LinkedIn
 
