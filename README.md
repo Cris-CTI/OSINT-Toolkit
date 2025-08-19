@@ -68,8 +68,8 @@ OSINT-Toolkit/
 │   ├── email_checker.py
 │   ├── image_metadata.py
 │   ├── whois_lookup.py
-│   ├── social_media_scraper.py  # optional
-│   └── ip_info.py               # optional
+│   ├── social_media_scraper.py 
+│   └── ip_info.py             
 ├── examples/
 │   ├── sample_email_output.txt
 │   ├── sample_domain_output.txt
@@ -95,11 +95,11 @@ beautifulsoup4
 ## Author
 
 ```bash
-[Your Name] – Threat Intelligence Analyst & Cybersecurity Specialist
+Cris-CTI – Threat Intelligence Analyst & Cybersecurity Specialist
 Cybersecurity Awareness & Automation Expert
 Power BI dashboards & automation for cybersecurity metrics
 Phishing simulations, threat intelligence, and resilience training
 
 # Connect with me
-LinkedIn
+LinkedIn: https://www.linkedin.com/in/cristina-martinez-campos/
 ```
