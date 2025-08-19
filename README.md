@@ -23,7 +23,7 @@ Set of basic OSINT scripts designed for junior cyber intelligence analysts. Incl
 ---
 
 ## Quick start
-## Setup environment
+## - Setup environment
 
 ```bash
 # Create virtual environment
@@ -39,7 +39,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Example usage
+## - Example usage
 
 ```bash
 # Email Checker
@@ -59,7 +59,7 @@ python scripts/social_media_scraper.py username
 python scripts/ip_info.py 8.8.8.8
 ```
 
-## Project structure
+## - Project structure
 
 ```bash
 OSINT-Toolkit/
