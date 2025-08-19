@@ -1,7 +1,8 @@
 <img width="933" height="382" alt="OSINT TOOLKIT CRISCTI" src="https://github.com/user-attachments/assets/706e5beb-62e8-4f37-a212-d7d549f290ee" />
 
-
-[Python 3.10+](https://www.python.org/) | [MIT License](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.10+-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![GitHub stars](https://img.shields.io/github/stars/TU_USUARIO/OSINT-Toolkit-for-Beginners?style=social)](https://github.com/TU_USUARIO/OSINT-Toolkit-for-Beginners/stargazers)
 
 ---
 
@@ -26,46 +27,39 @@ Set of basic OSINT scripts designed for junior cyber intelligence analysts. Incl
 
 ### Setup Environment
 ```bash
+# Create virtual environment
 python -m venv .venv
-```bash
+
 # On Windows
 .venv\Scripts\activate
-```bash
+
 # On Linux / Mac
 source .venv/bin/activate
-```bash
+
+# Install dependencies
 pip install -r requirements.txt
 
----
+```
 
-## Example Usage
+# Example Usage
 
-### Email Checker
-
-export HIBP_API_KEY="YOUR_API_KEY"   # Windows: set HIBP_API_KEY=YOUR_API_KEY
+# Email Checker
+export HIBP_API_KEY="YOUR_API_KEY"   # On Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
 
-
-### EXIF Metadata
-
+# EXIF Metadata
 python scripts/image_metadata.py examples/sample_image.jpg
 
-
-### Basic WHOIS / DNS
-
+# Basic WHOIS / DNS
 python scripts/whois_lookup.py example.com
 
-
-### Social Media Scraper
-
+# Social Media Scraper (optional)
 python scripts/social_media_scraper.py username
 
-
-### IP Information
-
+# IP Information (optional)
 python scripts/ip_info.py 8.8.8.8
 
----
+```
 
 ## Project Structure
 
