@@ -46,14 +46,15 @@ pip install -r requirements.txt
 export HIBP_API_KEY="YOUR_API_KEY"   # On Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
 
-Sample output:
+# Sample output
 Email: test@example.com
 Found in breaches:
 - Adobe (2013)
 - LinkedIn (2012)
 - Dropbox (2016)
-<img width="952" height="186" alt="email_checker" src="https://github.com/user-attachments/assets/7763e8e2-819b-4c03-9247-a721d9e66ad4" />
 
+<img width="952" height="186" alt="email_checker" src="https://github.com/user-attachments/assets/781138a7-0c07-4681-b9d6-6487d433f882" />
+```
 
 # EXIF Metadata
 python scripts/image_metadata.py 
