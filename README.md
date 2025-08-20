@@ -46,6 +46,15 @@ pip install -r requirements.txt
 export HIBP_API_KEY="YOUR_API_KEY"   # On Windows: set HIBP_API_KEY=YOUR_API_KEY
 python scripts/email_checker.py test@example.com
 
+Sample output:
+Email: test@example.com
+Found in breaches:
+- Adobe (2013)
+- LinkedIn (2012)
+- Dropbox (2016)
+<img width="952" height="186" alt="email_checker" src="https://github.com/user-attachments/assets/7763e8e2-819b-4c03-9247-a721d9e66ad4" />
+
+
 # EXIF Metadata
 python scripts/image_metadata.py 
 
@@ -65,146 +74,14 @@ python scripts/ip_info.py 8.8.8.8
 OSINT-Toolkit/
 ├── scripts/
 │   ├── email_checker.py
-import os
-import requests
-import sys
-
-def check_email(email):
-    api_key = os.getenv("HIBP_API_KEY")
-    if not api_key:
-        print("Error: Missing HIBP_API_KEY environment variable")
-        return
-
-    url = f"https://haveibeenpwned.com/api/v3/breachedaccount/{email}"
-    headers = {
-        "hibp-api-key": api_key,
-        "User-Agent": "OSINT-Toolkit"
-    }
-
-    response = requests.get(url, headers=headers)
-
-    if response.status_code == 200:
-        breaches = response.json()
-        print(f"[+] {email} found in {len(breaches)} breaches:")
-        for b in breaches:
-            print(f"  - {b['Name']} ({b['Domain']})")
-    elif response.status_code == 404:
-        print(f"[-] {email} not found in breaches")
-    else:
-        print(f"[!] Error: {response.status_code} {response.text}")
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python email_checker.py <email>")
-    else:
-        check_email(sys.argv[1])
-
 │   ├── image_metadata.py
-from PIL import Image
-from PIL.ExifTags import TAGS
-import sys
-
-def extract_metadata(image_path):
-    try:
-        image = Image.open(image_path)
-        exif_data = image._getexif()
-
-        if not exif_data:
-            print("No EXIF metadata found.")
-            return
-
-        for tag, value in exif_data.items():
-            tag_name = TAGS.get(tag, tag)
-            print(f"{tag_name}: {value}")
-
-    except Exception as e:
-        print(f"Error reading image: {e}")
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python image_metadata.py <image_path>")
-    else:
-        extract_metadata(sys.argv[1])
-
 │   ├── whois_lookup.py
-import whois
-import socket
-import sys
-
-def lookup_domain(domain):
-    try:
-        w = whois.whois(domain)
-        print("WHOIS Information:")
-        for k, v in w.items():
-            print(f"{k}: {v}")
-    except Exception as e:
-        print(f"Error performing WHOIS: {e}")
-
-    try:
-        ip = socket.gethostbyname(domain)
-        print(f"\nResolved IP: {ip}")
-    except Exception as e:
-        print(f"Error resolving IP: {e}")
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python whois_lookup.py <domain>")
-    else:
-        lookup_domain(sys.argv[1])
-
-│   ├── social_media_scraper.py
-import requests
-import sys
-
-platforms = {
-    "Twitter": "https://twitter.com/{}",
-    "Instagram": "https://www.instagram.com/{}/",
-    "GitHub": "https://github.com/{}",
-}
-
-def check_username(username):
-    print(f"Checking username: {username}\n")
-    for name, url in platforms.items():
-        full_url = url.format(username)
-        try:
-            response = requests.get(full_url)
-            if response.status_code == 200:
-                print(f"[+] Found on {name}: {full_url}")
-            else:
-                print(f"[-] Not found on {name}")
-        except Exception as e:
-            print(f"[!] Error checking {name}: {e}")
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python social_media_scraper.py <username>")
-    else:
-        check_username(sys.argv[1])
-
-│   └── ip_info.py
-import requests
-import sys
-
-def get_ip_info(ip):
-    url = f"https://ipinfo.io/{ip}/json"
-    try:
-        response = requests.get(url)
-        if response.status_code == 200:
-            data = response.json()
-            print("IP Information:")
-            for k, v in data.items():
-                print(f"{k}: {v}")
-        else:
-            print(f"Error: {response.status_code}")
-    except Exception as e:
-        print(f"Request failed: {e}")
-
-if __name__ == "__main__":
-    if len(sys.argv) < 2:
-        print("Usage: python ip_info.py <ip_address>")
-    else:
-        get_ip_info(sys.argv[1])
-            
+│   ├── social_media_scraper.py  # optional
+│   └── ip_info.py               # optional
+├── examples/
+│   ├── sample_email_output.txt
+│   ├── sample_domain_output.txt
+│   └── sample_image.jpg
 ├── requirements.txt
 ├── LICENSE
 └── README.md
