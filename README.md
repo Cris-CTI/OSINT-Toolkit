@@ -55,19 +55,57 @@ Found in breaches:
 - Dropbox (2016)
 ```
 <img width="952" height="186" alt="email_checker" src="https://github.com/user-attachments/assets/781138a7-0c07-4681-b9d6-6487d433f882" />
+
 ```bash
 # 2. EXIF Metadata
-python scripts/image_metadata.py 
+python scripts/image_metadata.py
 
+# Sample output
+No EXIF data found
+```
+<img width="1271" height="67" alt="exif_info" src="https://github.com/user-attachments/assets/6f1d9fee-8c85-4392-b219-33b655f4741c" />
+
+```bash
 # 3. Basic WHOIS / DNS
 python scripts/whois_lookup.py example.com
 
+# Sample output
+WHOIS:
+domain_name: EXAMPLE.COM
+registrar: RESERVED-Internet Assigned Numbers Authority
+creation_date: 1995-08-14
+expiration_date: 2026-08-13
+name_servers: ['A.IANA-SERVERS.NET', 'B.IANA-SERVERS.NET']
+status: ['clientDeleteProhibited', 'clientTransferProhibited', 'clientUpdateProhibited']
+Resolved IP: 23.215.0.136
+
+```
+<img width="1905" height="591" alt="whois_info" src="https://github.com/user-attachments/assets/7c63aa47-ecf4-4660-90e6-8cfc1e7c27d7" />
+
+```bash
 # 4. Social Media Scraper 
 python scripts/social_media_scraper.py username
 
+# Sample output
+Username: username
+Profile found: Yes
+Posts: 123
+Followers: 456
+Following: 78
+
+```
+<img width="958" height="180" alt="social_media_output" src="https://github.com/user-attachments/assets/4a5a2776-97f2-4bb3-9196-2cdefc04a644" />
+
+```bash
 # 5. IP Information 
 python scripts/ip_info.py 8.8.8.8
+
+# Sample output
+{'status': 'success', 'country': 'United States', 'countryCode': 'US', 'region': 'VA', 'regionName': 'Virginia', 'city': 'Ashburn', 'zip': '20149', 'lat': 39.03, 'lon': -77.5, 'timezone': 'America/New_York', 'isp': 'Google LLC', 'org': 'Google Public DNS', 'as': 'AS15169 Google LLC', 'query': '8.8.8.8'}
+
 ```
+<img width="950" height="321" alt="ip_info" src="https://github.com/user-attachments/assets/eb45551d-9082-439c-b6d0-e08a839cfca6" />
+
 
 ## - Project structure
 
