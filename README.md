@@ -115,12 +115,16 @@ OSINT-Toolkit/
 │   ├── email_checker.py
 │   ├── image_metadata.py
 │   ├── whois_lookup.py
-│   ├── social_media_scraper.py  # optional
-│   └── ip_info.py               # optional
+│   ├── social_media_scraper.py  
+│   └── ip_info.py              
 ├── examples/
 │   ├── sample_email_output.txt
 │   ├── sample_domain_output.txt
-│   └── sample_image.jpg
+│   ├── sample_image.jpg
+│   ├── sample_email_output.png
+│   ├── sample_domain_output.png
+│   ├── sample_image_output.png
+│   └── sample_ip_output.png
 ├── requirements.txt
 ├── LICENSE
 └── README.md
